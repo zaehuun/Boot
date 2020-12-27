@@ -1,0 +1,8 @@
+org/zerock/board/repository/MemberRepositoryTests.java
+ org.zerock.board.repository.MemberRepositoryTests
+org/zerock/board/BoardApplicationTests.java
+ org.zerock.board.BoardApplicationTests
+org/zerock/board/repository/BoardRepositoryTests.java
+ org.zerock.board.repository.BoardRepositoryTests
+org/zerock/board/repository/ReplyRepositoryTests.java
+ org.zerock.board.repository.ReplyRepositoryTests

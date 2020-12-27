@@ -1,0 +1,2147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.zerock.board.repository.ReplyRepositoryTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-12-27T18:32:13" hostname="DESKTOP-6H3A898" time="1.885">
+  <properties/>
+  <testcase name="insertReply()" classname="org.zerock.board.repository.ReplyRepositoryTests" time="1.885"/>
+  <system-out><![CDATA[03:32:06.928 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+03:32:06.946 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+03:32:06.989 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [org.zerock.board.repository.ReplyRepositoryTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+03:32:07.003 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.zerock.board.repository.ReplyRepositoryTests], using SpringBootContextLoader
+03:32:07.010 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [org.zerock.board.repository.ReplyRepositoryTests]: class path resource [org/zerock/board/repository/ReplyRepositoryTests-context.xml] does not exist
+03:32:07.011 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [org.zerock.board.repository.ReplyRepositoryTests]: class path resource [org/zerock/board/repository/ReplyRepositoryTestsContext.groovy] does not exist
+03:32:07.011 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [org.zerock.board.repository.ReplyRepositoryTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+03:32:07.012 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.zerock.board.repository.ReplyRepositoryTests]: ReplyRepositoryTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+03:32:07.087 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [org.zerock.board.repository.ReplyRepositoryTests]
+03:32:07.182 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\Users\pc\Downloads\board\board\build\classes\java\main\org\zerock\board\BoardApplication.class]
+03:32:07.185 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.zerock.board.BoardApplication for test class org.zerock.board.repository.ReplyRepositoryTests
+03:32:07.320 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [org.zerock.board.repository.ReplyRepositoryTests]: using defaults.
+03:32:07.321 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+03:32:07.347 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7f8fea62, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1316a077, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4f5303c6, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@791fd556, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7943fced, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5f70eeaa, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@8ea8bb1, org.springframework.test.context.event.EventPublishingTestExecutionListener@fd85a9f, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@699a7b1d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@31c7cd3a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6d2c7fb0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@206ddc28, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@1a9509ab, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1534a9de]
+03:32:07.351 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@4cd5052 testClass = ReplyRepositoryTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@6784b3fd testClass = ReplyRepositoryTests, locations = '{}', classes = '{class org.zerock.board.BoardApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@6c41a95f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@5855277, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3dea4e72, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@282a7010, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@78aeafb4, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@5691c71f], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+03:32:07.401 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.1)
+
+2020-12-28 03:32:07.765  INFO 31172 --- [    Test worker] o.z.b.repository.ReplyRepositoryTests    : Starting ReplyRepositoryTests using Java 14.0.1 on DESKTOP-6H3A898 with PID 31172 (started by pc in C:\Users\pc\Downloads\board\board)
+2020-12-28 03:32:07.768  INFO 31172 --- [    Test worker] o.z.b.repository.ReplyRepositoryTests    : No active profile set, falling back to default profiles: default
+2020-12-28 03:32:08.810  INFO 31172 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-12-28 03:32:08.910  INFO 31172 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87 ms. Found 3 JPA repository interfaces.
+2020-12-28 03:32:09.767  INFO 31172 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-28 03:32:09.852  INFO 31172 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2020-12-28 03:32:10.051  INFO 31172 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2020-12-28 03:32:10.232  INFO 31172 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-12-28 03:32:10.308  INFO 31172 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-12-28 03:32:10.354  INFO 31172 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2020-12-28 03:32:11.310  INFO 31172 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-28 03:32:11.323  INFO 31172 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-28 03:32:11.670  WARN 31172 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-28 03:32:12.041  INFO 31172 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-28 03:32:13.284  INFO 31172 --- [    Test worker] o.z.b.repository.ReplyRepositoryTests    : Started ReplyRepositoryTests in 5.874 seconds (JVM running for 7.43)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        reply
+        (mod_date, regdate, board_bno, replyer, text) 
+    values
+        (?, ?, ?, ?, ?)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
