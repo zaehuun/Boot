@@ -1,7 +1,18 @@
+org/zerock/board/repository/MemberRepository.java
+ org.zerock.board.repository.MemberRepository
+org/zerock/board/dto/BoardDTO.java
+ org.zerock.board.dto.BoardDTO
+ org.zerock.board.dto.BoardDTO$BoardDTOBuilder
 org/zerock/board/ServletInitializer.java
  org.zerock.board.ServletInitializer
+org/zerock/board/entity/Board.java
+ org.zerock.board.entity.Board
+ org.zerock.board.entity.Board$BoardBuilder
 org/zerock/board/repository/ReplyRepository.java
  org.zerock.board.repository.ReplyRepository
+org/zerock/board/entity/Reply.java
+ org.zerock.board.entity.Reply
+ org.zerock.board.entity.Reply$ReplyBuilder
 org/zerock/board/entity/BaseEntity.java
  org.zerock.board.entity.BaseEntity
 org/zerock/board/entity/Member.java
@@ -9,13 +20,14 @@ org/zerock/board/entity/Member.java
  org.zerock.board.entity.Member$MemberBuilder
 org/zerock/board/BoardApplication.java
  org.zerock.board.BoardApplication
+org/zerock/board/dto/PageRequestDTO.java
+ org.zerock.board.dto.PageRequestDTO
+ org.zerock.board.dto.PageRequestDTO$PageRequestDTOBuilder
 org/zerock/board/repository/BoardRepository.java
  org.zerock.board.repository.BoardRepository
-org/zerock/board/repository/MemberRepository.java
- org.zerock.board.repository.MemberRepository
-org/zerock/board/entity/Board.java
- org.zerock.board.entity.Board
- org.zerock.board.entity.Board$BoardBuilder
-org/zerock/board/entity/Reply.java
- org.zerock.board.entity.Reply
- org.zerock.board.entity.Reply$ReplyBuilder
+org/zerock/board/dto/PageResultDTO.java
+ org.zerock.board.dto.PageResultDTO
+org/zerock/board/service/BoardServiceImpl.java
+ org.zerock.board.service.BoardServiceImpl
+org/zerock/board/service/BoardService.java
+ org.zerock.board.service.BoardService
