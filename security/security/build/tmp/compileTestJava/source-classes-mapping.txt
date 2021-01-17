@@ -1,0 +1,6 @@
+com/example/security/SecurityApplicationTests.java
+ com.example.security.SecurityApplicationTests
+com/example/security/password/PasswordTests.java
+ com.example.security.password.PasswordTests
+com/example/security/password/ClubMemberTests.java
+ com.example.security.password.ClubMemberTests
